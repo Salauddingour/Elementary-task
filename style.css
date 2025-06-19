@@ -1,0 +1,136 @@
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #dbeafe);
+  color: #1e293b;
+}
+header {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Button-13 (Nav Buttons) */
+.button-13 {
+  touch-action: manipulation;
+  background: none;
+  position: relative;
+  border-width: 4px 12px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 8px 24px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.4s;
+}
+.button-13:active { transform: scale(0.92); }
+.button-13-background {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px),
+                     calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+  background-color: saddlebrown;
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
+                    linear-gradient(to bottom, #af6a65, #cfa381, #88312b, #994021);
+  transition: filter 0.2s;
+  will-change: filter;
+}
+.button-13 .text {
+  background: linear-gradient(180deg, #FFE5C2 1%, #CDAF87 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 3;
+  position: relative;
+}
+.button-13-border {
+  position: absolute;
+  z-index: 1;
+  inset: -4px -12px;
+}
+@supports (-webkit-mask-box-image: inherit) {
+  .button-13-border {
+    background-image: linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
+    -webkit-mask-box-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border.svg");
+    -webkit-mask-box-image-slice: 15 23;
+    -webkit-mask-box-image-width: 15px 23px;
+    -webkit-mask-box-image-repeat: repeat;
+  }
+}
+
+/* Button-30 (Skills) */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+              rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+              #D6D6E7 0 -3px 0 inset;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  white-space: nowrap;
+  font-size: 16px;
+  margin: 8px;
+}
+.button-30:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+              rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+              #D6D6E7 0 -3px 0 inset;
+}
+.button-30:active {
+  transform: translateY(2px);
+  box-shadow: #D6D6E7 0 3px 7px inset;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 3px 6px rgba(0,0,0,0.3);
+  margin-bottom: 1.5rem;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  animation: slideIn 1s ease;
+}
+
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
